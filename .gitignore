@@ -1,0 +1,32 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+SpringMvcJdbcTemplate/target/*
+SpringMvcJdbcTemplate/.setting/*
+SpringMvcJdbcTemplate/.classpath
+SpringMvcJdbcTemplate/.project
+mvnw
+mvnw.cmd
+
+###F:\BOCOBI2\rencontre\backend\src\main\java\com\bocobi2\rencontre\model\Test.java
