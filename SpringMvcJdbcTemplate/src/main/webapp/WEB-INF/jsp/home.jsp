@@ -22,6 +22,9 @@
 	href="${pageContext.request.contextPath}/resources/css/style.css"
 	type="text/css" media="all">
 <link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/formulaire.css"
+	type="text/css" media="all">
+<link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/bootstrap.css"
 	type="text/css" media="all">
 </head>
@@ -65,7 +68,7 @@
 
 		</header>
 	</div>
-	<div class="container">
+	<div class="container" id="monformulaire">
 		<h2>Présentation</h2>
 		<h4>
 			Cette année, le département de Mathématiques et Informatique
@@ -77,6 +80,8 @@
 			projets ou produits de recherche ou professionnel validé par les
 			écoles doctorales au titre de la formation.
 		</h4>
+	</div>
+	<div  id="monformulaire">
 		<h2>Les objectifs pour les participants</h2>
 		<h4>
 			<ol>
@@ -97,6 +102,7 @@
 				<li>S'informer sur l'emploi des docteurs</li>
 				<li>Réfléchir à leur avenir professionnel</li>
 			</ol>
+			
 			Ce séminaire s’organise en sessions plénières et en sessions
 			parallèles pendant trois jours. Ce cadre permet au doctorant de
 			prendre du recul et du temps pour réfléchir et échanger avec de
@@ -104,6 +110,8 @@
 			intervenants, recruteurs, créateurs et personnes ressources encadrant
 			le séminaire,…
 		</h4>
+		</div>
+		<div  id="monformulaire">
 		<h2>Pourquoi les doctoriales?</h2>
 		<h4>
 			<ol>
@@ -120,6 +128,7 @@
 
 			</ol>
 		</h4>
+		</div>
 	</div>
 	<div class="body2">
 		<div class="main">
