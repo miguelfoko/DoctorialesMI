@@ -37,8 +37,14 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/newContact", method = RequestMethod.GET)
+	@RequestMapping(value = "/comiteOrganisation", method = RequestMethod.GET)
 	public ModelAndView newContact(ModelAndView model) {
+		model.setViewName("comiteOrganisation");
+		return model;
+	}
+	
+	@RequestMapping(value = "/newContact", method = RequestMethod.GET)
+	public ModelAndView newContacts(ModelAndView model) {
 		Contact newContact = new Contact();
 		model.addObject("contact", newContact);
 		model.setViewName("ContactForm");
@@ -66,5 +72,10 @@ public class HomeController {
 		model.addObject("contact", contact);
 		
 		return model;
+	}
+	@RequestMapping(value = "/readMore", method = RequestMethod.GET)
+	public String read(Model model) {
+		System.out.println("c'est le readMore");
+		return "readMore";
 	}
 }

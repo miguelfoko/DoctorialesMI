@@ -51,7 +51,7 @@
 								un article</a></li>
 					</ul>
 				</nav>
-			
+
 			</div>
 			<figure>
 				<a href="#"><img
@@ -62,67 +62,54 @@
 		</header>
 		<!-- / header -->
 	</div>
+
+	<div class="body2" WITH="70%" align="justify">
+	<H2>Comité d'organisation</H2>
+		<ol>
+			<li>Pr Emmanuel NGAMENI</li>
+			<li>Pr Marcellin Julius NKENLIFACK</li>
+			<li>Pr Célestin LELE</li>
+			<li>Pr Clémentin TAYOU DJAMEGNI</li>
+			
+			<li>Pr Calvin TADMON</li>
+			<li>Pr Jean Louis WOUKENG</li>
+
+			<li>Dr Benoit Martin AZANGUEZET</li>
+			<li>Dr Alain Bertrand BOMGNI</li>
+			<li>Dr Gabriel DEUGOUE</li>
+			<li>Dr Pascaline DICKMU LIAKEN</li>
+			<li>Dr David DONGO</li>
+			<li>Dr Éric FOTSING</li>
+			<li>Dr Bernard FOTSING TALLA</li>
+			<li>Dr Vianney KENGNE TCHENDJI</li>
+			<li>Dr Blaise Blériot KOGUEP NJIONOU</li>
+			<li>Dr Cletus KUM</li>
+			<li>Dr Jean Pierre LIENOU</li>
+			<li>Dr Guiléne MPAME</li>
+			<li>Dr Thierry NOULAMO</li>
+			<li>Dr Mathias ONABID</li>
+			<li>Dr Jean Baptiste PATENOU</li>
+			<li>Dr Elie TAGNE FUTE</li>
+			<li>Dr Narcisse TALLA TANKAM</li>
+			<li>Dr Calvin TCHEKA</li>
+			<li>Dr Laurent TCHOUALAG</li>
+			<li>Dr Maurice TCHOUPE TCHENDJI</li>
+			<li>Dr Berge TSANOU</li> 
+			<h2>Secrétariat Scientifique</h2>
+
+
+			<li>Dr Géraud FOKOU PELAP</li>
+			<li>Dr Maurice KENFACK NANGHO</li>
+			<li>M. Mathurin SOH</li>
+
+			<li>Dr Francis DJIOFACK</li>
+			<li>M. Miguel Landry FOKO SINDJOUNG</li>
+
+		</ol>
 	</div>
-	<div class="body2">
+	<div class="main3">
 
-		<div class="main1">
-			<div class="main2">
-
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-
-						<span class="font1">Présentation</span>
-						<p>Cette année, le département de Mathématiques et
-							Informatique organisera ses Doctoriales du 04 au 06 juin 2018 au
-							campus C de l’université de Dschang...
-							Les inscriptions sont ouvertes jusqu'au 15 mai 2018 à l’adresse</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-				</div>
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-						<span class="font1">Les objectifs pour les participants</span>
-						<p>Les débouchés le plus souvent souhaité par les doctorants
-							sont un poste d'enseignant-chercheur, ou de chercheur dans un
-							organisme de recherche public ou privé...</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-				</div>
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-
-						<span class="font1">Pourquoi les doctoriales?</span>
-						<p>Les doctorants doivent pouvoir en tirer le meilleur parti,
-							notamment pour préparer l'après thèse Les Doctoriales ont donc
-							pour objectif de sensibiliser les doctorants aux différentes
-							opportunités de carrière qui s'offrent à eux...</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-
-				</div>
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-
-						<span class="font1">Informatique</span>
-						<p>Learn Center Template goes with two packages – with PSD
-							source files and without them. PSD source files are available for
-							free for the registered members of Templates.com. The basic
-							package (without PSD source is available for anyone without
-							registration).</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-
-				</div>
-
-
-			</div>
-			<div class="main3">
-
-				<div class="pad_left1">
+		<div class="pad_left1">
 					<h2>Information récentes</h2>
 				</div>
 				<ul class="list1">

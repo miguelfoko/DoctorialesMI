@@ -53,10 +53,10 @@ console.log('Bienvenue');
 
 
  //form.insertBefore(fin, select);
- form.appendChild(label);
-form.appendChild(select);
-form.appendChild(label1);
-form.appendChild(select1);
+// form.appendChild(label);
+//form.appendChild(select);
+//form.appendChild(label1);
+//form.appendChild(select1);
 
 label1.style.display = 'none';
 select1.style.display = 'none';

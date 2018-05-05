@@ -3,6 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="com.doctoriales.mi.model.User"%>
+<%@ page import="com.doctoriales.mi.controller.*"%>
 <%@ page import="com.doctoriales.mi.model.Student"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -36,7 +37,7 @@
 			<div class="container">
 				<nav>
 					<ul id="menu">
-						<li><a href="${pageContext.request.contextPath}/">Acceuil</a></li>
+						<li><a href="${pageContext.request.contextPath}/">Accueil</a></li>
 						<li><a href="${pageContext.request.contextPath}/registration">Inscription</a></li>
 						<li><a
 							href="${pageContext.request.contextPath}/uploadArticle">Soumettre
@@ -44,26 +45,25 @@
 						<li><a
 							href="${pageContext.request.contextPath}/updateParameter">modifier
 								vos parametres</a></li>
-						<li><a
-							href="${pageContext.request.contextPath}/">Modifier
+						<li><a href="${pageContext.request.contextPath}/updateArticle">Modifier
 								un article</a></li>
 					</ul>
 				</nav>
-				<ul id="icon">
-					<li><a href="#"><img
-							src="${pageContext.request.contextPath}/resources/css/icon1.jpg"
-							alt=""></a></li>
-					<li><a href="#"><img
-							src="${pageContext.request.contextPath}/resources/css/icon2.jpg"
-							alt=""></a></li>
-				</ul>
+
 			</div>
-			<c:if test="${operationResult!=null}">
-			<h1 class="list2"> <font color="red">${operationResult }</font></h1>
-				<script type="text/javascript">
-   					alert('${operationResult }');
-			    </script>
-			</c:if>
+			<div id="slogan">
+				<span>Les inscriptions sont ouvertes jusqu'au 15 Mai 2018 à
+					23h59min, heure du Cameroun </span>
+				<c:if test="${operationResult!=null}">
+					<h1 class="list2">
+						<font color="red">${operationResult }</font>
+					</h1>
+					<script type="text/javascript">
+						alert('${operationResult }');
+					</script>
+				</c:if>
+			</div>
+
 		</header>
 		<!-- header-->
 
@@ -78,21 +78,23 @@
 					<div class="form-group">
 						<label for="lastName">Nom:</label> <input class="form-control"
 							type="text" name="lastName" id="lastName" size="50" required
-							onkeyup='nom()' />
+							onkeyup='nom()' /> <span class="erreur">${erreurs['name']}</span>
 					</div>
 					<div class="form-group">
-						<label for="firstName">Prenom:</label> <input class="form-control"
+						<label for="firstName">Prénom:</label> <input class="form-control"
 							type="text" name="firstName" size="50" id="firstName"
-							required/ onkeyup='prenom()'><br>
+							required/ onkeyup='prenom()'><span class="erreur">${erreurs['firstName']}</span><br>
 					</div>
 					<div class="form-group">
 						<label class="form-label col-xs-2" for="mail">Email:</label> <input
-							class="form-control" type="text" size="50" required name="email"><br>
+							class="form-control" type="text" size="50" required name="email"><span
+							class="erreur">${erreurs['email']}</span><br>
 					</div>
 					<div class="form-group">
 						<label for="password">Password:</label> <input
 							class="form-control" type="password" name="password" size="50"
-							id="password" required/ onkeyup='prenom()'><br>
+							id="password" required/ onkeyup='prenom()'><span
+							class="erreur">${erreurs['password']}</span><br>
 					</div>
 					<div class="form-group">
 						<label for="option">Sexe :</label> <select name="sexe"
@@ -102,7 +104,7 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label class="form-label col-xs-4" for="universityName">Universite
+						<label class="form-label col-xs-4" for="universityName">Université
 							d'origine:</label> <input class="form-control" type="text"
 							name="universityName" size="50" id="universityName" required
 							onkeyup='universityName()' />
@@ -115,13 +117,13 @@
 					<div class="form-group">
 						<label for="option">Spécialité :</label> <select name="option"
 							class="form-control" onkeyup='option()'>
-							<option value="Maths-algebre">Maths-algebre</option>
-							<option value="Maths-analyse">Maths-analyse</option>
+							<option value="Maths-algebre">Mathématique-algebre</option>
+							<option value="Maths-analyse">Mathématique-analyse</option>
 							<option value="Informatique">Informatique</option>
 						</select>
 					</div>
 					<div class="form-group" id="qualite">
-						<label for="quality">Qualite :</label> <select name="quality"
+						<label for="quality">Qualité :</label> <select name="quality"
 							class="form-control" onkeyup='quality()'>
 							<option value="enseignant" onclick="chooseGrade()">Enseignant</option>
 							<option value="etudiant" onclick="chooseLevel()">Etudiant</option>
@@ -140,110 +142,110 @@
 		<!-- / corps -->
 	</div>
 	<div class="body2">
-		<div class="container">
-			<!-- content -->
-			<section id="content">
-				<div class="wrapper">
-					<div class="pad1 pad_top1">
-						<article class="cols marg_right1">
-							<figure>
-								<a href="#"><img
-									src="${pageContext.request.contextPath}/resources/css/page1_img1.jpg"
-									alt="" width="282px" height="179px"></a>
-							</figure>
-							<span class="font1">Informatique</span>
-						</article>
-						<article class="cols marg_right1">
-							<figure>
-								<a href="#"><img
-									src="${pageContext.request.contextPath}/resources/css/images.png"
-									alt="" width="282px" height="179px"></a>
-							</figure>
-							<span class="font1">Mathematique Algebre</span>
-						</article>
-						<article class="cols">
-							<figure>
-								<a href="#"><img
-									src="${pageContext.request.contextPath}/resources/css/index.jpeg"
-									alt="" width="282px" height="179px"></a>
-							</figure>
-							<span class="font1">Mathematique Analyse</span>
-						</article>
+			<div class="container">
+				<!-- content -->
+				<section id="content">
+					<div class="wrapper">
+						<div class="pad1 pad_top1">
+							<article class="cols marg_right1">
+								<figure>
+									<a href="#"><img
+										src="${pageContext.request.contextPath}/resources/css/page1_img1.jpg"
+										alt="" width="282px" height="179px"></a>
+								</figure>
+								<span class="font1">Informatique</span>
+							</article>
+							<article class="cols marg_right1">
+								<figure>
+									<a href="#"><img
+										src="${pageContext.request.contextPath}/resources/css/images.png"
+										alt="" width="282px" height="179px"></a>
+								</figure>
+								<span class="font1">Mathématique Algèbre</span>
+							</article>
+							<article class="cols">
+								<figure>
+									<a href="#"><img
+										src="${pageContext.request.contextPath}/resources/css/index.jpeg"
+										alt="" width="282px" height="179px"></a>
+								</figure>
+								<span class="font1">Mathématique Analyse</span>
+							</article>
+						</div>
 					</div>
-				</div>
-			</section>
-			<!-- content -->
-			<!-- footer -->
-			<%-- <%@include file="includeFile/footer.jsp" %> --%>
-<!-- 			<footer> -->
-<!-- 				<div class="wrapper"> -->
-<!-- 					<div class="pad1"> -->
-<!-- 						<div class="pad_left1"> -->
-<!-- 							<div class="wrapper"> -->
-<!-- 								<article class="col_1"> -->
-<!-- 									<h3>Etablissement</h3> -->
-<!-- 									<p class="col_address"> -->
-<!-- 										<strong>Faculte<br> Nom<br> filier<br> -->
-<!-- 											niveau -->
-<!-- 										</strong> -->
-<!-- 									</p> -->
-<!-- 									<p> -->
-<!-- 										FS<br> Informatique<br> 4<br> <a href="mailto:">lcenter@mail.com</a> -->
-<!-- 									</p> -->
-<!-- 								</article> -->
-<!-- 								<article class="col_2 pad_left2"> -->
-<!-- 									<h3>Nous joindre:</h3> -->
-<!-- 									<ul class="list2"> -->
-<!-- 										<li><a href="#">Sign Up</a></li> -->
-<!-- 										<li><a href="#">Forums</a></li> -->
-<!-- 										<li><a href="#">Promotions</a></li> -->
-<!-- 										<li><a href="#">Lorem</a></li> -->
-<!-- 									</ul> -->
-<!-- 								</article> -->
-<!-- 								<article class="col_3 pad_left2"> -->
-<!-- 									<h3>pourquoi nous:</h3> -->
-<!-- 									<ul class="list2"> -->
-<!-- 										<li><a href="#">Lorem ipsum dolor </a></li> -->
-<!-- 										<li><a href="#">Aonsect adipisic</a></li> -->
-<!-- 										<li><a href="#">Eiusmjkod tempor </a></li> -->
-<!-- 										<li><a href="#">Incididunt ut labore </a></li> -->
-<!-- 									</ul> -->
-<!-- 								</article> -->
-<!-- 								<article class="col_4 pad_left2"> -->
-<!-- 									<h3>Newsletter:</h3> -->
-<%-- 									<form id="newsletter" method="post"> --%>
-<!-- 										<div class="wrapper"> -->
-<!-- 											<div class="bg"> -->
-<!-- 												<input type="text"> -->
-<!-- 											</div> -->
-<!-- 										</div> -->
-<!-- 										<a href="#" class="button" -->
-<!-- 											onclick="document.getElementById('newsletter').submit()"><span><span><strong>Souscrire</strong></span></span></a> -->
-<%-- 									</form> --%>
-<!-- 								</article> -->
-<!-- 							</div> -->
+				</section>
+				<!-- content -->
+				<!-- footer -->
+				<%-- <%@include file="includeFile/footer.jsp" %> --%>
+				<!-- 			<footer> -->
+				<!-- 				<div class="wrapper"> -->
+				<!-- 					<div class="pad1"> -->
+				<!-- 						<div class="pad_left1"> -->
+				<!-- 							<div class="wrapper"> -->
+				<!-- 								<article class="col_1"> -->
+				<!-- 									<h3>Etablissement</h3> -->
+				<!-- 									<p class="col_address"> -->
+				<!-- 										<strong>Faculte<br> Nom<br> filier<br> -->
+				<!-- 											niveau -->
+				<!-- 										</strong> -->
+				<!-- 									</p> -->
+				<!-- 									<p> -->
+				<!-- 										FS<br> Informatique<br> 4<br> <a href="mailto:">lcenter@mail.com</a> -->
+				<!-- 									</p> -->
+				<!-- 								</article> -->
+				<!-- 								<article class="col_2 pad_left2"> -->
+				<!-- 									<h3>Nous joindre:</h3> -->
+				<!-- 									<ul class="list2"> -->
+				<!-- 										<li><a href="#">Sign Up</a></li> -->
+				<!-- 										<li><a href="#">Forums</a></li> -->
+				<!-- 										<li><a href="#">Promotions</a></li> -->
+				<!-- 										<li><a href="#">Lorem</a></li> -->
+				<!-- 									</ul> -->
+				<!-- 								</article> -->
+				<!-- 								<article class="col_3 pad_left2"> -->
+				<!-- 									<h3>pourquoi nous:</h3> -->
+				<!-- 									<ul class="list2"> -->
+				<!-- 										<li><a href="#">Lorem ipsum dolor </a></li> -->
+				<!-- 										<li><a href="#">Aonsect adipisic</a></li> -->
+				<!-- 										<li><a href="#">Eiusmjkod tempor </a></li> -->
+				<!-- 										<li><a href="#">Incididunt ut labore </a></li> -->
+				<!-- 									</ul> -->
+				<!-- 								</article> -->
+				<!-- 								<article class="col_4 pad_left2"> -->
+				<!-- 									<h3>Newsletter:</h3> -->
+				<%-- 									<form id="newsletter" method="post"> --%>
+				<!-- 										<div class="wrapper"> -->
+				<!-- 											<div class="bg"> -->
+				<!-- 												<input type="text"> -->
+				<!-- 											</div> -->
+				<!-- 										</div> -->
+				<!-- 										<a href="#" class="button" -->
+				<!-- 											onclick="document.getElementById('newsletter').submit()"><span><span><strong>Souscrire</strong></span></span></a> -->
+				<%-- 									</form> --%>
+				<!-- 								</article> -->
+				<!-- 							</div> -->
 
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</footer> -->
-			<!-- / footer -->
+				<!-- 						</div> -->
+				<!-- 					</div> -->
+				<!-- 				</div> -->
+				<!-- 			</footer> -->
+				<!-- / footer -->
+			</div>
 		</div>
-	</div>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resources/css/inscription.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resources/css/bootstrap.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resources/js/jquery-1.5.2.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resources/js/cufon-yui.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resources/js/cufon-replace.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resources/js/Molengo_400.font.js"></script>
-	<script type="text/javascript"
-		src="${pageContext.request.contextPath}/resources/js/Expletus_Sans_400.font.js"></script>
-	<script type="text/javascript"> Cufon.now(); </script>
+		<script type="text/javascript"
+			src="${pageContext.request.contextPath}/resources/vendor/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript"
+			src="${pageContext.request.contextPath}/resources/js/jquery-1.5.2.js"></script>
+		<script type="text/javascript"
+			src="${pageContext.request.contextPath}/resources/js/cufon-yui.js"></script>
+		<script type="text/javascript"
+			src="${pageContext.request.contextPath}/resources/js/cufon-replace.js"></script>
+		<script type="text/javascript"
+			src="${pageContext.request.contextPath}/resources/js/Molengo_400.font.js"></script>
+		<script type="text/javascript"
+			src="${pageContext.request.contextPath}/resources/js/Expletus_Sans_400.font.js"></script>
+		<script type="text/javascript">
+		Cufon.now();
+	</script>
 </body>
 </html>

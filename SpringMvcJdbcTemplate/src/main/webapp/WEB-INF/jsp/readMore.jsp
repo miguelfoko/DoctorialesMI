@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Inscription</title>
+<title>information</title>
 <meta charset="utf-8">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/reset.css"
@@ -51,7 +51,7 @@
 								un article</a></li>
 					</ul>
 				</nav>
-			
+				
 			</div>
 			<figure>
 				<a href="#"><img
@@ -66,79 +66,86 @@
 	<div class="body2">
 
 		<div class="main1">
-			<div class="main2">
-
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-
-						<span class="font1">Présentation</span>
-						<p>Cette année, le département de Mathématiques et
-							Informatique organisera ses Doctoriales du 04 au 06 juin 2018 au
-							campus C de l’université de Dschang...
-							Les inscriptions sont ouvertes jusqu'au 15 mai 2018 à l’adresse</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-				</div>
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-						<span class="font1">Les objectifs pour les participants</span>
-						<p>Les débouchés le plus souvent souhaité par les doctorants
-							sont un poste d'enseignant-chercheur, ou de chercheur dans un
-							organisme de recherche public ou privé...</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-				</div>
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-
-						<span class="font1">Pourquoi les doctoriales?</span>
-						<p>Les doctorants doivent pouvoir en tirer le meilleur parti,
-							notamment pour préparer l'après thèse Les Doctoriales ont donc
-							pour objectif de sensibiliser les doctorants aux différentes
-							opportunités de carrière qui s'offrent à eux...</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-
-				</div>
-				<div id="monformulaire">
-					<article class="cols marg_right1">
-
-						<span class="font1">Informatique</span>
-						<p>Learn Center Template goes with two packages – with PSD
-							source files and without them. PSD source files are available for
-							free for the registered members of Templates.com. The basic
-							package (without PSD source is available for anyone without
-							registration).</p>
-						<a href="${pageContext.request.contextPath}/readMore" class="button"><span><span>Read More</span></span></a>
-
-					</article>
-
-				</div>
 
 
-			</div>
-			<div class="main3">
 
-				<div class="pad_left1">
-					<h2>Information récentes</h2>
-				</div>
-				<ul class="list1">
-<%-- 					<li><a href="${pageContext.request.contextPath}/resources/Doctoriales.zip">Télécharger le template des articles</a></li> --%>
-					<li><a href="#">Télécharger le template des articles</a></li>
-					<li><a href="${pageContext.request.contextPath}/comiteOrganisation">Comité d'organisation</a></li>
-					<li><a href="#">Présenter les travaux de recherche </a></li>
-					<li><a href="#">Améliorer ses capacités a présenter</a></li>
-					<li><a href="#">Se préparer a l'après thèse</a></li>
+
+
+			<article class="cols marg_right1">
+
+				<span class="font1" id="readMore">Présentation</span>
+				<ul id="readMore">
+					<li>Cette année, le département de Mathématiques et
+						Informatique organisera ses Doctoriales du 04 au 06 juin 2018 au
+						campus C de l’université de Dschang.</li>
+					<li>Ce séminaire entre dans le cadre des formations proposées
+						aux doctorants de l’Université de Dschang pour réfléchir à leur
+						projet et se préparer à "l'après-thèse".</li>
+					<li>Les Doctoriales sont une véritable formation à la
+						valorisation des projets et produits de recherche ainsi que de
+						leurs impacts sur la technologie et le monde socio-professionnel</li>
+					<li>Les inscriptions sont ouvertes jusqu'au <b><a
+						href="${pageContext.request.contextPath}/registration">15 mai
+							2018</a></b> à l’adresse
+					</li>
+
 				</ul>
 
 
+			</article>
 
-			</div>
+			<article class="cols marg_right1">
+				<span class="font1">Les objectifs pour les participants</span>
+				<ul  id="readMore">
+					<li>La thèse est considérée comme une expérience
+						professionnelle : les doctorants doivent pouvoir en tirer le
+						meilleur parti, notamment pour préparer l'après thèse</li>
+					<li>Les débouchés le plus souvent souhaité par les doctorants
+						sont un poste d'enseignant-chercheur, ou de chercheur dans un
+						organisme de recherche public ou privé. En fait, les situations
+						professionnelles ouvertes par le doctorat sont beaucoup plus
+						larges, tant vers le secteur public que vers le secteur privé</li>
+					<li>Les Doctoriales ont donc pour objectif de sensibiliser les
+						doctorants aux différentes opportunités de carrière qui s'offrent
+						à eux</li>
+					<li>Ameliorer ses capacites a presenter</li>
 
+				</ul>
+			</article>
+
+			<article class="cols marg_right1">
+
+				<span class="font1">Pourquoi les doctoriales?</span>
+				<ul id="readMore">
+					<li>La thèse est considérée comme une expérience
+						professionnelle : les doctorants doivent pouvoir en tirer le
+						meilleur parti, notamment pour préparer l'après thèse</li>
+					<li>Les débouchés le plus souvent souhaité par les doctorants
+						sont un poste d'enseignant-chercheur, ou de chercheur dans un
+						organisme de recherche public ou privé. En fait, les situations
+						professionnelles ouvertes par le doctorat sont beaucoup plus
+						larges, tant vers le secteur public que vers le secteur privé</li>
+					<li>Les Doctoriales ont donc pour objectif de sensibiliser les
+						doctorants aux différentes opportunités de carrière qui s'offrent
+						à eux</li>
+					<li>Ameliorer ses capacites a presenter</li>
+
+				</ul>
+			</article>
+
+			<article class="cols marg_right1">
+
+				<span class="font1">Pourquoi les doctoriales?</span>
+					<ul id="readMore">
+						<li>s'ouvrir au monde sociologique</li>
+						<li>prendre conscience de ses acquis</li>
+						<li>defendre des travaux de recherche</li>
+						<li>Ameliorer ses capacites a presenter</li>
+						<li>Se preparer a l'apres thèse</li>
+					</ul>
+			</article>
 		</div>
+
 		<div class="body2">
 			<div class="container">
 				<!-- content -->

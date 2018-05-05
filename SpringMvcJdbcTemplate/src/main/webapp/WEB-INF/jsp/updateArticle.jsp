@@ -3,6 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="com.doctoriales.mi.model.User"%>
+<%@ page import="com.doctoriales.mi.model.Article"%>
 <%@ page import="com.doctoriales.mi.model.Student"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -53,9 +54,6 @@
 			</div>
 			<div id ="slogan">
 					<span>Bien vouloir séparer les différents mots clés par des points virgules </span>
-					<span>Copiez le résumé de votre article et collez le dans le champs Résumé ci-dessous </span>
-					<span>Les mots clés doivent être séparé par des virgules </span>
-					<span>N'oubliez pas de sélectionner le fichier avant de valider </span>
 					<c:if test="${operationResult!=null}">
 					<h1 class="list2">
 						<font color="red">${operationResult }</font>
@@ -73,20 +71,23 @@
 
 				<div id="monformulaire" class="container">
 
-					<h1>Envoyez un Article</h1>
+					<h1>Modifiez votre article Article</h1>
 
-					<form action="<c:url value='uploadArticle'/>" method="post"	enctype="multipart/form-data" id="Myform" class="well col-xs-8">
+					<form action="<c:url value='updateArticle'/>" method="post"	enctype="multipart/form-data" id="Myform" class="well col-xs-8">
 						<input type="hidden" name="userId" value="${user.getInscriptionCode()}"/>
 						<input type="hidden" name="userLastName" value="${user.getUserLastName()}"/>
+						<input type="hidden" name="articleId" value="${article.getArticleId()}"/>
 						<input type="hidden" name="userFirstName" value="${user.getUserFirstName()}"/>
 						<input type="hidden" name="userOption" value="${user.getOption()}"/>
 						<div class="form-group">
 							<label for="title">Titre:</label>
-							<input class="form-control" type="text" name="title" id="title" size="50" required />
+							<input class="form-control" type="text" name="title" id="title" size="50" 
+							required value="${article.getArticleTitle() }"/>
 						</div>
 						<div class="form-group">
 							<label for="codeRegistration">Mots clés:</label> 
-							<input class="form-control" type="text" name="keywords" size="50" id="keywords" required/><br>
+							<input class="form-control" type="text" name="keywords" size="50" 
+							id="keywords" required value="${article.getKeywords() }"/><br>
 						</div>
 						
 						<div class="form-group">
@@ -95,7 +96,9 @@
 						</div>
 						<div class="form-group">
 							<label for="abstract" class="label-control">Résumé:</label> 
-							<textarea class="form-control" rows="10" name="abstract"></textarea>
+							<textarea class="form-control" rows="10" name="abstract">
+							${article.getArticleAbstract() }
+							</textarea>
 						</div>
 
 						<div class="form-group" id="fin">
